@@ -1,5 +1,15 @@
 {
-  "name": "baidu-proj",
+  "name": "@planet/baidu-proj",
   "version": "0.0.0",
-  "description": "Utilities for working with Baidu coordinates"
+  "description": "Utilities for working with Baidu coordinates",
+  "devDependencies": {
+    "eslint": "^2.3.0",
+    "eslint-config-planet": "^5.0.0"
+  },
+  "scripts": {
+    "test": "eslint lib"
+  },
+  "eslintConfig": {
+    "extends": "planet"
+  }
 }
