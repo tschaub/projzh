@@ -1,6 +1,6 @@
 {
   "name": "@planet/baidu-proj",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Utilities for working with Baidu coordinates",
   "devDependencies": {
     "eslint": "^2.3.0",
