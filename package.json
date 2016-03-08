@@ -2,6 +2,7 @@
   "name": "@planet/baidu-proj",
   "version": "0.2.0",
   "description": "Utilities for working with Baidu coordinates",
+  "main": "lib/index.js",
   "devDependencies": {
     "code": "^2.1.0",
     "eslint": "^2.3.0",
