@@ -3,11 +3,14 @@
   "version": "0.1.0",
   "description": "Utilities for working with Baidu coordinates",
   "devDependencies": {
+    "code": "^2.1.0",
     "eslint": "^2.3.0",
-    "eslint-config-planet": "^5.0.0"
+    "eslint-config-planet": "^5.0.0",
+    "lab": "^10.2.0"
   },
   "scripts": {
-    "test": "eslint lib"
+    "pretest": "eslint lib",
+    "test": "lab test"
   },
   "eslintConfig": {
     "extends": "planet"
