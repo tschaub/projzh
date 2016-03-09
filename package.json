@@ -1,6 +1,6 @@
 {
   "name": "@planet/baidu-proj",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Utilities for working with Baidu coordinates",
   "main": "lib/index.js",
   "devDependencies": {
