@@ -4,45 +4,24 @@ const sphericalMercator = require('../../projection/spherical-mercator');
 const expect = require('code').expect;
 const lab = exports.lab = require('lab').script();
 
-const inverseDelta = 1e-4;
-const forwardDelta = 1e-2;
+const inverseDelta = 1e-12;
+const forwardDelta = 1e-7;
 
 const cases = [{
-  ll: [
-    -180,
-    -85
-  ],
-  sm: [
-    -20037508.342789244,
-    -19971868.880408563
-  ]
+  ll: [120, 30],
+  sm: [13358338.895192828, 3503549.843504376]
 }, {
-  ll: [
-    180,
-    -85
-  ],
-  sm: [
-    20037508.342789244,
-    -19971868.880408563
-  ]
+  ll: [-180, -85],
+  sm: [-20037508.342789244, -19971868.880408563]
 }, {
-  ll: [
-    180,
-    85
-  ],
-  sm: [
-    20037508.342789244,
-    19971868.880408563
-  ]
+  ll: [180, -85],
+  sm: [20037508.342789244, -19971868.880408574]
 }, {
-  ll: [
-    -180,
-    85
-  ],
-  sm: [
-    -20037508.342789244,
-    19971868.880408563
-  ]
+  ll: [180, 85],
+  sm: [20037508.342789244, 19971868.880408574]
+}, {
+  ll: [-180, 85],
+  sm: [-20037508.342789244, 19971868.880408563]
 }];
 
 lab.experiment('sphericalMercator', _ => {
