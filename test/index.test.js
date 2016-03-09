@@ -4,12 +4,13 @@ const baidu = require('../lib/index');
 const expect = require('code').expect;
 const lab = exports.lab = require('lab').script();
 
-const delta = 1e-2;
+const deltaDegree = 1e-4;
+const deltaMeter = 1e-2;
 
 const data = {
-  ll: [72.004, 0.8293, 137.8347, 55.8271],
-  bmerc: [8015948.731472805, 91836.26763588775, 15345592.295399487, 7490041.134398721],
-  smerc: [8015139.8184281085, 91769.09457092141, 15344693.738606343, 7524571.612939372]
+  ll: [73, 1, 137, 55],
+  bmerc: [8127480.603199672, 111352.77538914987, 15252717.919720594, 7328184.397722913],
+  smerc: [8126322.82790897, 111325.14286638466, 15250770.23867848, 7361866.113051189]
 };
 
 lab.experiment('ll2bmerc()', _ => {
@@ -17,7 +18,7 @@ lab.experiment('ll2bmerc()', _ => {
     const output = baidu.ll2bmerc(data.ll);
     expect(output).to.have.length(data.bmerc.length);
     output.forEach((value, i) => {
-      expect(value).to.be.about(data.bmerc[i], delta);
+      expect(value).to.be.about(data.bmerc[i], deltaMeter);
     });
     done();
   });
@@ -28,7 +29,29 @@ lab.experiment('bmerc2ll()', _ => {
     const output = baidu.bmerc2ll(data.bmerc);
     expect(output).to.have.length(data.ll.length);
     output.forEach((value, i) => {
-      expect(value).to.be.about(data.ll[i], delta);
+      expect(value).to.be.about(data.ll[i], deltaDegree);
+    });
+    done();
+  });
+});
+
+lab.experiment('ll2smerc()', _ => {
+  lab.test('transforms Geographic/WGS84 to Spherical Mercator', done => {
+    const output = baidu.ll2smerc(data.ll);
+    expect(output).to.have.length(data.smerc.length);
+    output.forEach((value, i) => {
+      expect(value).to.be.about(data.smerc[i], deltaMeter);
+    });
+    done();
+  });
+});
+
+lab.experiment('smerc2ll()', _ => {
+  lab.test('transforms Spherical Mercator to Geographic/WGS84', done => {
+    const output = baidu.smerc2ll(data.smerc);
+    expect(output).to.have.length(data.ll.length);
+    output.forEach((value, i) => {
+      expect(value).to.be.about(data.ll[i], deltaDegree);
     });
     done();
   });
@@ -39,7 +62,18 @@ lab.experiment('bmerc2smerc()', _ => {
     const output = baidu.bmerc2smerc(data.bmerc);
     expect(output).to.have.length(data.smerc.length);
     output.forEach((value, i) => {
-      expect(value).to.be.about(data.smerc[i], delta);
+      expect(value).to.be.about(data.smerc[i], deltaMeter);
+    });
+    done();
+  });
+});
+
+lab.experiment('smerc2bmerc()', _ => {
+  lab.test('transforms Spherical Mercator to Baidu Mercator', done => {
+    const output = baidu.smerc2bmerc(data.smerc);
+    expect(output).to.have.length(data.bmerc.length);
+    output.forEach((value, i) => {
+      expect(value).to.be.about(data.bmerc[i], deltaMeter);
     });
     done();
   });
