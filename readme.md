@@ -1,8 +1,6 @@
 # projzh
 
-This package provides utilities for working with coordinate reference systems used by Baidu maps.
-
-The code is ported from the [`proj4m` project](https://github.com/MapTalks/proj4m) which is licensed under the GPL v3.
+This package provides utilities for working with coordinate reference systems used by Baidu maps.  The algorithms are ported from the [`proj4m` project](https://github.com/MapTalks/proj4m) which is licensed under the GPL v3.
 
 # Rough details
 
@@ -20,7 +18,7 @@ To transform a point in the CRS used by Baidu to geographic/WGS-84, first do the
 bd09.toWGS84(baiduMercator.inverse(point))
 ```
 
-This package exports the functions above in the `lib/datum/bd-09` and `lib/projection/baidu-mercator` modules.  Additional transforms for transforms to/from Spherical Mercator are available in the `index` module.
+This package exports the functions above in the `lib/datum/bd-09` and `lib/projection/baidu-mercator` modules.  Additional functions for transforms to/from Spherical Mercator are available in the `index` module.
 
 # Installation
 
@@ -30,4 +28,4 @@ The utility functions can be used in Node or in browsers with a module bundler.
 
 # License
 
-As a port of the [`proj4m` project](https://github.com/MapTalks/proj4m), this qualifies as a derivative work and caries the same [GPL v3 license](https://tldrlegal.com/license/gnu-general-public-license-v3-(gpl-3)).
+As a port of the [`proj4m` project](https://github.com/MapTalks/proj4m), this qualifies as a derivative work and carries the same [GPL v3 license](https://tldrlegal.com/license/gnu-general-public-license-v3-(gpl-3)).
