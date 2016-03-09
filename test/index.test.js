@@ -1,8 +1,8 @@
 'use strict'
 
-const baidu = require('../lib/index');
 const expect = require('code').expect;
 const lab = exports.lab = require('lab').script();
+const projzh = require('../lib/index');
 
 const deltaDegree = 1e-4;
 const deltaMeter = 1e-2;
@@ -15,7 +15,7 @@ const data = {
 
 lab.experiment('ll2bmerc()', _ => {
   lab.test('transforms Geographic/WGS84 to Baidu Mercator', done => {
-    const output = baidu.ll2bmerc(data.ll);
+    const output = projzh.ll2bmerc(data.ll);
     expect(output).to.have.length(data.bmerc.length);
     output.forEach((value, i) => {
       expect(value).to.be.about(data.bmerc[i], deltaMeter);
@@ -26,7 +26,7 @@ lab.experiment('ll2bmerc()', _ => {
 
 lab.experiment('bmerc2ll()', _ => {
   lab.test('transforms Baidu Mercator to Geographic/WGS84', done => {
-    const output = baidu.bmerc2ll(data.bmerc);
+    const output = projzh.bmerc2ll(data.bmerc);
     expect(output).to.have.length(data.ll.length);
     output.forEach((value, i) => {
       expect(value).to.be.about(data.ll[i], deltaDegree);
@@ -37,7 +37,7 @@ lab.experiment('bmerc2ll()', _ => {
 
 lab.experiment('ll2smerc()', _ => {
   lab.test('transforms Geographic/WGS84 to Spherical Mercator', done => {
-    const output = baidu.ll2smerc(data.ll);
+    const output = projzh.ll2smerc(data.ll);
     expect(output).to.have.length(data.smerc.length);
     output.forEach((value, i) => {
       expect(value).to.be.about(data.smerc[i], deltaMeter);
@@ -48,7 +48,7 @@ lab.experiment('ll2smerc()', _ => {
 
 lab.experiment('smerc2ll()', _ => {
   lab.test('transforms Spherical Mercator to Geographic/WGS84', done => {
-    const output = baidu.smerc2ll(data.smerc);
+    const output = projzh.smerc2ll(data.smerc);
     expect(output).to.have.length(data.ll.length);
     output.forEach((value, i) => {
       expect(value).to.be.about(data.ll[i], deltaDegree);
@@ -59,7 +59,7 @@ lab.experiment('smerc2ll()', _ => {
 
 lab.experiment('bmerc2smerc()', _ => {
   lab.test('transforms Baidu Mercator to Spherical Mercator', done => {
-    const output = baidu.bmerc2smerc(data.bmerc);
+    const output = projzh.bmerc2smerc(data.bmerc);
     expect(output).to.have.length(data.smerc.length);
     output.forEach((value, i) => {
       // This ±6m delta is suspicious.
@@ -72,7 +72,7 @@ lab.experiment('bmerc2smerc()', _ => {
 
 lab.experiment('smerc2bmerc()', _ => {
   lab.test('transforms Spherical Mercator to Baidu Mercator', done => {
-    const output = baidu.smerc2bmerc(data.smerc);
+    const output = projzh.smerc2bmerc(data.smerc);
     expect(output).to.have.length(data.bmerc.length);
     output.forEach((value, i) => {
       expect(value).to.be.about(data.bmerc[i], deltaMeter);
