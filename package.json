@@ -1,12 +1,30 @@
 {
-  "name": "@planet/baidu-proj",
+  "name": "projzh",
   "version": "0.3.0",
-  "description": "Utilities for working with Baidu coordinates",
+  "description": "Utilities for working with Chinese coordinate reference systems",
+  "keywords": [
+    "baidu",
+    "mercator",
+    "bd-09",
+    "gcj-02",
+    "projection",
+    "datum",
+    "transform",
+    "china"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tschaub/projzh.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tschaub/projzh/issues"
+  },
+  "license": "GPL-3.0",
   "main": "lib/index.js",
   "devDependencies": {
     "code": "^2.1.0",
     "eslint": "^2.3.0",
-    "eslint-config-planet": "^5.0.0",
+    "eslint-config-tschaub": "^4.0.0",
     "lab": "^10.2.0"
   },
   "scripts": {
@@ -14,6 +32,6 @@
     "test": "lab test"
   },
   "eslintConfig": {
-    "extends": "planet"
+    "extends": "tschaub"
   }
 }
