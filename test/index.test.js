@@ -2,7 +2,7 @@
 
 const expect = require('code').expect;
 const lab = exports.lab = require('lab').script();
-const projzh = require('../lib/index');
+const projzh = require('../index');
 
 const deltaDegree = 1e-4;
 const deltaMeter = 1e-2;

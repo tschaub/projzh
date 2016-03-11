@@ -1,6 +1,6 @@
 'use strict'
 
-const baiduMercator = require('../../lib/projection/baidu-mercator');
+const baiduMercator = require('../../projection/baidu-mercator');
 const expect = require('code').expect;
 const lab = exports.lab = require('lab').script();
 

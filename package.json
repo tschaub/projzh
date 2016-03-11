@@ -20,16 +20,20 @@
     "url": "https://github.com/tschaub/projzh/issues"
   },
   "license": "GPL-3.0",
-  "main": "lib/index.js",
+  "main": "index.js",
   "devDependencies": {
+    "browserify": "^13.0.0",
     "code": "^2.1.0",
     "eslint": "^2.3.0",
     "eslint-config-tschaub": "^4.0.0",
-    "lab": "^10.2.0"
+    "lab": "^10.2.0",
+    "uglify-js": "^2.6.2"
   },
   "scripts": {
-    "pretest": "eslint lib",
-    "test": "lab test"
+    "pretest": "eslint . --ignore-pattern *.min.js",
+    "test": "lab test",
+    "prepublish": "npm run bundle",
+    "bundle": "browserify --standalone projzh index.js | uglifyjs --output index.min.js"
   },
   "eslintConfig": {
     "extends": "tschaub"
