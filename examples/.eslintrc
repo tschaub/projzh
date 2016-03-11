@@ -1,0 +1,8 @@
+{
+  "globals": {
+    "projzh": false
+  },
+  "rules": {
+    "no-console": 0
+  }
+}

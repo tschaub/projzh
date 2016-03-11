@@ -18,7 +18,7 @@ To transform a point in the CRS used by Baidu to geographic/WGS-84, first do the
 bd09.toWGS84(baiduMercator.inverse(point))
 ```
 
-This package exports the functions above in the `lib/datum/bd-09` and `lib/projection/baidu-mercator` modules.  Additional functions for transforms to/from Spherical Mercator are available in the `index` module.
+This package exports the functions above in the `datum/bd-09` and `projection/baidu-mercator` modules.  Additional functions for transforms to/from Spherical Mercator are available in the `index` module.
 
 # Installation
 

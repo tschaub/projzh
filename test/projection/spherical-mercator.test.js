@@ -1,6 +1,6 @@
 'use strict'
 
-const sphericalMercator = require('../../lib/projection/spherical-mercator');
+const sphericalMercator = require('../../projection/spherical-mercator');
 const expect = require('code').expect;
 const lab = exports.lab = require('lab').script();
 
