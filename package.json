@@ -23,7 +23,7 @@
   "main": "index.js",
   "devDependencies": {
     "browserify": "^13.0.0",
-    "code": "^3.0.0",
+    "code": "^3.0.1",
     "eslint": "^2.3.0",
     "eslint-config-tschaub": "^4.0.0",
     "lab": "^10.2.0",
