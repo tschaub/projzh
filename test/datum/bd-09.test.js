@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 const bd09 = require('../../datum/bd-09');
 const expect = require('code').expect;

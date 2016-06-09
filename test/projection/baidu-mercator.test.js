@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 const baiduMercator = require('../../projection/baidu-mercator');
 const expect = require('code').expect;
