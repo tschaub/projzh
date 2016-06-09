@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 const expect = require('code').expect;
 const lab = exports.lab = require('lab').script();

@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 const sphericalMercator = require('../../projection/spherical-mercator');
 const expect = require('code').expect;

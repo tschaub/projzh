@@ -14,7 +14,7 @@ exports.forEachPoint = function(func) {
       }
     }
     for (var offset = 0; offset < len; offset += dimension) {
-      func(input, output, offset)
+      func(input, output, offset);
     }
     return output;
   };
