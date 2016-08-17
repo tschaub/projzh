@@ -27,7 +27,7 @@
     "eslint": "^3.3.0",
     "eslint-config-tschaub": "^5.0.0",
     "lab": "^10.2.0",
-    "uglify-js": "^2.6.2"
+    "uglify-js": "^2.7.3"
   },
   "scripts": {
     "pretest": "eslint . --ignore-pattern *.min.js",
