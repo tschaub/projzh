@@ -24,7 +24,7 @@
   "devDependencies": {
     "browserify": "^13.0.0",
     "code": "^3.0.0",
-    "eslint": "^3.3.0",
+    "eslint": "^3.10.1",
     "eslint-config-tschaub": "^5.0.0",
     "lab": "^11.1.0",
     "uglify-js": "^2.6.2"
