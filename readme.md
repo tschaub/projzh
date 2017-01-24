@@ -1,5 +1,7 @@
 # projzh
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/tschaub/projzh.svg)](https://greenkeeper.io/)
+
 This package provides utilities for working with coordinate reference systems used by Baidu maps.  The algorithms are ported from the [`proj4m` project](https://github.com/MapTalks/proj4m) which is licensed under the GPL v3.
 
 # Rough details
