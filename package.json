@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/tschaub/projzh/issues"
   },
-  "license": "GPL-3.0",
+  "license": "MIT",
   "main": "index.js",
   "devDependencies": {
     "browserify": "^13.0.0",
