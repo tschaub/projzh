@@ -28,4 +28,4 @@ The utility functions can be used in Node or in browsers with a module bundler.
 
 # License
 
-As a port of the [`proj4m` project](https://github.com/MapTalks/proj4m), this qualifies as a derivative work and carries the same [GPL v3 license](https://tldrlegal.com/license/gnu-general-public-license-v3-(gpl-3)).
+This package is derived from the [`proj4m` project](https://github.com/MapTalks/proj4m) and is distributed under the [MIT license](https://tldrlegal.com/license/mit-license).

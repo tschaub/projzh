@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/tschaub/projzh/issues"
   },
-  "license": "GPL-3.0",
+  "license": "MIT",
   "main": "index.js",
   "devDependencies": {
     "browserify": "^13.0.0",
@@ -31,7 +31,7 @@
   },
   "scripts": {
     "pretest": "eslint . --ignore-pattern *.min.js",
-    "test": "lab test",
+    "test": "lab --leaks test",
     "prepublish": "npm run bundle",
     "bundle": "browserify --standalone projzh index.js | uglifyjs --output index.min.js"
   },
