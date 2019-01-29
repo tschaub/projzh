@@ -31,7 +31,7 @@
   },
   "scripts": {
     "pretest": "eslint . --ignore-pattern *.min.js",
-    "test": "lab test",
+    "test": "lab --leaks test",
     "prepublish": "npm run bundle",
     "bundle": "browserify --standalone projzh index.js | uglifyjs --output index.min.js"
   },
