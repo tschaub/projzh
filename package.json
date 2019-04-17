@@ -23,10 +23,10 @@
   "main": "index.js",
   "devDependencies": {
     "browserify": "^13.0.0",
-    "code": "^3.0.0",
+    "code": "^4.0.0",
     "eslint": "^3.3.0",
-    "eslint-config-tschaub": "^5.0.0",
-    "lab": "^11.1.0",
+    "eslint-config-tschaub": "^6.0.0",
+    "lab": "^12.0.0",
     "uglify-js": "^2.6.2"
   },
   "scripts": {
